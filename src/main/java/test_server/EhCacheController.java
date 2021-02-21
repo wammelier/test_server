@@ -1,5 +1,9 @@
 package test_server;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.camel.json.simple.JsonObject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,9 +18,17 @@ public class EhCacheController {
 
 	@GetMapping("testServer")
 	@ResponseBody
-	public String getCacheMember() {
+	public List<JsonObject> getCacheMember() {
 
-		return "hello";
+		JsonObject jsonobj = new JsonObject();
+		jsonobj.put("id", 1);
+		jsonobj.put("name", "홍길동");
+		jsonobj.put("description", "testServer");
+
+		List<JsonObject> list = new ArrayList<>();
+		list.add(jsonobj);
+
+		return list;
 	}
 
 }
