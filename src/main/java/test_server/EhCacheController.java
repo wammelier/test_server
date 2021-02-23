@@ -13,10 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/")
+@RequestMapping("/accounts")
 public class EhCacheController {
 
-	@GetMapping("testServer")
+	@GetMapping("/transactions")
 	@ResponseBody
 	public List<JsonObject> getCacheMember() {
 
