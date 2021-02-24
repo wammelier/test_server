@@ -31,4 +31,20 @@ public class EhCacheController {
 		return list;
 	}
 
+	// @GetMapping("accounts")
+	// @ResponseBody
+	// public List<String> xmlDataSend() throws JsonMappingException, JsonProcessingException {
+	// String jsonString = "{\"custNm\":\"홍길동\","
+	// + "\"custPh\":\"010-0000-0000\","
+	// + "\"birth\":\"2000-01-23\""
+	// + "}";
+	//
+	// ObjectMapper objectMapper = new ObjectMapper();
+	// ObjectMapper xmlMapper = new XmlMapper();
+	// JsonNode tree = objectMapper.readTree(jsonString);
+	// String jsonAsXml = xmlMapper.writer().withRootName("RootTagName").writeValueAsString(tree);
+	// System.out.println(jsonAsXml);
+	// return jsonAsXml;
+	// }
+
 }
